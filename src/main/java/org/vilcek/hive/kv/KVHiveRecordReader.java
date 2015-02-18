@@ -108,6 +108,7 @@ public class KVHiveRecordReader implements RecordReader<LongWritable, MapWritabl
                         JsonNode jsonNode = object.getJsonNode();
                         value = jsonNode.toString().getBytes("UTF8");
                     } catch (Throwable ignored) {
+						ignored.printStackTrace();
                     }
                 }
                 if (minorKeysList.isEmpty()) {
