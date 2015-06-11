@@ -60,7 +60,7 @@ public class KVHiveSerDe implements SerDe {
     public void initialize(Configuration configuration, Properties properties) throws SerDeException {
         jsonKey = properties.getProperty("kv.avro.json.key");
         jsonKeyMappingColumn = properties.getProperty("kv.avro.json.keys.mapping.column");
-        jsonSerDeClass = properties.getProperty("kv.json.serde.class", "org.apache.hcatalog.data.JsonSerDe");
+        jsonSerDeClass = properties.getProperty("kv.json.serde.class", "org.apache.hive.hcatalog.data.JsonSerDe");
 
         kvMajorKeysMapping = properties.getProperty("kv.major.keys.mapping");
         kvMajorKeysMappingArray = kvMajorKeysMapping.split(",");
